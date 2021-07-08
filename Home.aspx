@@ -1,7 +1,5 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="ClickCafe._Default" %>
-
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-   
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Homee.Master" AutoEventWireup="true" CodeBehind="Home.aspx.cs" Inherits="ClickCafe.Home" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <style type="text/css">
         .carousel-caption{
             margin-bottom:100px;
@@ -54,16 +52,14 @@
                      .dots:hover{
                                 background:#fff;
                             }
-        
+
        
     </style>
 
-    <style type="text/css">
-
+ <style type="text/css">
 img:hover {
   animation: shake 0.5s;
   animation-iteration-count: infinite;
-  
 }
 
 @keyframes shake {
@@ -80,7 +76,7 @@ img:hover {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 </style>
-    
+
     <br /><br />
 
     <section id="home" class="container-fluid">
@@ -89,17 +85,16 @@ img:hover {
               </div>
 
     </section>
-   
+
     <div class="video-container" >
-            <video  src="foodimg/v2.mp4" autoplay loop class="vid vid1"></video>
+            <video src="foodimg/v7.mp4" autoplay loop class="vid vid1"></video>
          
-             <video  src="foodimg/v4.mp4" autoplay loop class="vid vid2"></video>
-             <video src="foodimg/v6.mp4" autoplay loop class="vid vid3"></video>
-             <video src="foodimg/v5.mp4" autoplay loop class="vid vid4"></video>
-             <video src="foodimg/v3.mp4" autoplay loop class="vid vid5"></video>
+             <video src="foodimg/v9.mp4" autoplay loop class="vid vid2"></video>
+             <video src="foodimg/v12.mp4" autoplay loop class="vid vid3"></video>
+             <video src="foodimg/v11.mp4" autoplay loop class="vid vid4"></video>
+             <video src="foodimg/v13.mp4" autoplay loop class="vid vid5"></video>
 
             </div>
-        
     <div class="controls">
         <div class="dots dot1"></div>
          <div class="dots dot2"></div>
@@ -107,7 +102,7 @@ img:hover {
          <div class="dots dot4"></div>
          <div class="dots dot5"></div>
     </div>
-  
+    
               
      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /> <br /><br /> <br /><br /> <br /><br /> <br /><br />
     <main>
@@ -253,8 +248,8 @@ img:hover {
             </p>
         </div>
     </div>  
-    
-    <script>
+   
+     <script>
         $('.dot1').click(function () {
             $('.vid1').css('display', 'block');
             $('.vid2').css('display', 'none');
@@ -290,6 +285,6 @@ img:hover {
             $('.vid4').css('display', 'none');
             $('.vid1').css('display', 'none');
         });
-    </script>
+     </script>
 
 </asp:Content>

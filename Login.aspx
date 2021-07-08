@@ -1,47 +1,63 @@
 ﻿<%@ Page Title="Login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="ClickCafe.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-<br /><br />
-<div class="row">
-  <div class="col-sm-6">
+<br />
 
-      <div id="food">
-        <table width="100%">
-            <tr>
-                <td>
-                    <asp:Image ID="Image3" runat="server" Height="140px" 
-                        ImageUrl="~/foodimg/barfood-header.jpg" Width="400px" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <asp:Image ID="Image1" runat="server" Height="140px" 
-                        ImageUrl="~/foodimg/restaurant_653893_0.jpg" Width="400px" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <asp:Image ID="Image2" runat="server" Height="140px" 
-                        ImageUrl="~/foodimg/barfood-header.jpg" Width="400px" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <asp:Image ID="Image4" runat="server" Height="140px" 
-                        ImageUrl="~/foodimg/restaurant_653893_0.jpg" Width="400px" />
-                </td>
-            </tr>
-      
-            <tr>
-                <td>
-                    &nbsp;</td>
-            </tr>
-        </table>
-    </div>
+     <style type="text/css">
+        body{
 
+        }
+         .hero-image {
+  background-image: url("/foodimg/b19.jpg");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top:0;
+}
+ /* .hero-image .content{
+      position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(1, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #000000; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+  
+*/
 
-  </div>
-    <div class="col-sm-6">
+        #regi{
+           
+             
+        }
+        .tbl{
+             margin-left:350px;
+             margin-top:70px;
+               border: 2px solid black;
+        
+        }
+        .tblhead{
+              border: 2px solid black;
 
+        }
+        .lbl{
+            font-size: 15px;
+            font-weight:400;
+    
+        }
+        .txt{
+
+        }
+        .txt:hover{
+
+        }
+
+    </style>
+
+    <div class="hero-image">
+        <div class="content">
+         <div class="hero-text">
     
    
     <div id="regi">
@@ -154,7 +170,6 @@
                    &nbsp;</td>
            </tr>
        </table></div>
-
-        </div>
+            </div> </div></div>
 
 </asp:Content>

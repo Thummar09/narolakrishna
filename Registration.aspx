@@ -1,53 +1,95 @@
 ﻿<%@ Page Title="Registration" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="ClickCafe.Registration" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <br /><br />
-    <div class="row">
-  <div class="col-sm-6">
+    <br />
+    <style type="text/css">
+        body{
 
-      <div id="food">
-        <table width="100%">
-            <tr>
-                <td>
-                    <asp:Image ID="Image3" runat="server" Height="140px" 
-                        ImageUrl="~/foodimg/barfood-header.jpg" Width="400px" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <asp:Image ID="Image1" runat="server" Height="140px" 
-                        ImageUrl="~/foodimg/restaurant_653893_0.jpg" Width="400px" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <asp:Image ID="Image2" runat="server" Height="140px" 
-                        ImageUrl="~/foodimg/barfood-header.jpg" Width="400px" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <asp:Image ID="Image4" runat="server" Height="140px" 
-                        ImageUrl="~/foodimg/restaurant_653893_0.jpg" Width="400px" />
-                </td>
-            </tr>
-      
-            <tr>
-                <td>
-                    &nbsp;</td>
-            </tr>
-        </table>
-    </div>
+        }
+         .hero-image {
+  background-image: url("/foodimg/b5.jpg");
+  background-color: #cccccc;
+  height: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top:0;
+  
+  
+}
+  .hero-image .content{
+      position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(1, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #000000; /* Grey text */
+  width: 100%; /* Full width */
+  padding: 20px; /* Some padding */
+  
+}
 
+        #regi{
+           
+             
+        }
+        .tbl{
+             margin-left:80px;
+               border: 2px solid black;
+               width:500px;
+        
+        }
+        .tblhead{
+              border: 2px solid black;
 
-  </div>
-  <div class="col-sm-6">
-
+        }
+        .lbl{
+            font-size: 15px;
+            font-weight:400;
+            
     
+        }
+        .txt{
+
+        }
+        .txt:hover{
+
+        }
+
+@media (max-width: 1048px){
+    .tbl{
+        font-size:20px;
+        height:auto;
+        
+    }
+    .hero-image{
+        margin-right:0px;
+    }
+    
+}
+
+@media(max-width: 909px){
+    .tbl{
+        font-size:20px;
+          height:auto;
+        
+    }
+    .hero-image{
+        margin-right:0px;
+    }
+}
+
+    </style>
+
+    <div class="hero-image">
+        <div class="content">
+         <div class="hero-text">
     <div id="regi">
+       
        <table class="tbl">
+            
            <tr>
                <td bgcolor="#FFFFCC" class="tblhead" align="center">
-                  <b> MEMBER REGISTRATION FORM</b></td>
+                  <b class="text-decoration-none"> MEMBER REGISTRATION FORM</b></td>
            </tr><br />
            <tr>
                <td>
@@ -60,7 +102,7 @@
                            <td class="style2">
                                &nbsp;</td>
                            <td class="lbl">
-                               First Name :&nbsp;
+                               First Name: &nbsp;&nbsp;&nbsp; &nbsp;
                            </td>
                            <td>
                                <asp:TextBox ID="txtfname" runat="server"></asp:TextBox>
@@ -118,10 +160,12 @@
                                Gender :&nbsp;&nbsp;
                            </td>
                            <td>
+                               
                                <asp:RadioButton ID="rdomale" runat="server" ForeColor="Black" Text="Male" 
                                    GroupName="a" Checked="True" />
                                <asp:RadioButton ID="rdofemale" runat="server" ForeColor="Black" 
                                    Text="Female" GroupName="a" />
+                              
                            </td>
                            <td>
                                &nbsp;</td>
@@ -171,7 +215,7 @@
                                    SetFocusOnError="True"></asp:RequiredFieldValidator>
                                <asp:RangeValidator ID="RangeValidator2" runat="server" 
                                    ControlToValidate="txtpincode" ErrorMessage="invalid pincode" 
-                                   ForeColor="Yellow" MaximumValue="999999" MinimumValue="100000" 
+                                   ForeColor="Red" MaximumValue="999999" MinimumValue="100000" 
                                    SetFocusOnError="True" Type="Double"></asp:RangeValidator>
                            </td>
                            <td>
@@ -233,7 +277,7 @@
                            <td class="style2">
                                &nbsp;</td>
                            <td class="lbl">
-                               Confirm - Pass :&nbsp;&nbsp;
+                               Conf. Pass :&nbsp;&nbsp;
                            </td>
                            <td>
                                <asp:TextBox ID="txtconfirmpass" runat="server" TextMode="Password"></asp:TextBox>
@@ -252,7 +296,7 @@
                            <td>
                                &nbsp;</td>
                            <td>
-                               <asp:Label ID="lblmsg" runat="server" ForeColor="#FFCC00"></asp:Label>
+                               <asp:Label ID="lblmsg" runat="server" ForeColor="#FF0000"></asp:Label>
                            </td>
                            <td>
                                &nbsp;</td>
@@ -265,8 +309,10 @@
                            <td>
                                &nbsp;</td>
                            <td>
-                               <asp:Button ID="btnreg" runat="server" Height="35px" 
-                                   Text="Rgister Now" Width="120px" />
+                               <strong>
+                               <asp:Button ID="btnreg" runat="server" Height="35px" font-weight="1000" Font-Size="Medium"
+                                   Text="Register Now" Width="120px" />
+                               </strong>
                            </td>
                            <td>
                                &nbsp;</td>
@@ -297,8 +343,8 @@
                    &nbsp;</td>
            </tr>
        </table>
-</div>
-        </div>
-    </div>
+
+     </div></div></div>
+       </div>
 </asp:Content>
 

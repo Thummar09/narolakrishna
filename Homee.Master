@@ -8,13 +8,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - Online Food Ordering System</title>
    
-
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+     <link rel="stylesheet" href="css/style3.css" />
+     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" ></script>
+    <script>
+        $(document).ready(function () {
+            $('#icon').click(function () {
+                $('ul').toggleClass('show');
+            });
+        });
+    </script>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
 
     <webopt:bundlereference runat="server" path="~/Content/css" />
      <link rel="shortcut icon" type="image/x-icon" href="~/Icons/IMG-20210617-WA0016.ico" />
+    
+    <style type="text/css">
+        .auto-style1 {
+            height: 57px;
+            width: 62px;
+        }
+    </style>
     
 </head>
 <body>
@@ -39,19 +57,9 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/Icons/IMG-20210617-WA0016.jpg">&nbsp;</a>Website Logo
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
+       <nav>
+            <label class="logo">ClickCafe</label>
+                    <ul>
                          <li><a runat="server" href="~/Home">Home</a></li>
                         <li><a runat="server" href="~/Account">Account</a></li>
                         <li><a runat="server" href="~/MyOrder">My Order</a></li>
@@ -59,17 +67,145 @@
                         <li><a runat="server" href="~/Password">Change Password</a></li>
                         <li><a runat="server" href="~/Default">LogOut</a></li>
                     </ul>
-                </div>
-            </div>
-        </div>
+            <label id="icon">
+                <i class="fas fa-bars"></i>
+            </label>
+                </nav>
         <div class="container body-content">
             <asp:ContentPlaceHolder ID="MainContent" runat="server">
             </asp:ContentPlaceHolder>
 
             <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Food Ordering Website</p>
-            </footer>
+            <!-- Footer -->
+<footer class="bg-dark text-center text-white">
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row" >
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Content -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Click Cafe</h5>
+        <p>Here you can use rows and columns to organize your footer content.</p>
+       
+
+      </div>
+      <!-- Grid column -->
+
+     
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Links -->
+        <h5 class="font-weight-bold text-uppercase mb-4">SHORTCUTS</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <a href="#!">Home</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#!">Company</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#!">Careers</a>
+            </p>
+          </li>
+             <li>
+            <p>
+              <a href="#!">Contact</a>
+            </p>
+          </li>
+          <li>
+            <p>
+              <a href="#!">Help</a>
+            </p>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
+
+        <!-- Contact details -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <p>
+              <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+          </li>
+          <li>
+            <p>
+              <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
+
+        <!-- Social buttons -->
+        <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
+
+        <!-- Facebook -->
+        <a type="button" class="btn-floating btn-fb">
+        
+          <i class="fab fa-facebook-f"></i>
+        </a> <br /> <br />
+        <!-- Twitter -->
+        <a type="button" class="btn-floating btn-tw">
+           
+          <i class="fab fa-twitter"></i>
+        </a> <br /> <br />
+        <!-- Google +-->
+        <a type="button" class="btn-floating btn-gplus">
+          
+          <i class="fab fa-google-plus-g"></i>
+        </a>
+        
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+    </br>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2021 Copyright:
+    <a href="https://mdbootstrap.com/"> ClickCafe.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
         </div>
 
     </form>
